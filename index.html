@@ -271,8 +271,100 @@
                         <br>
                         <p class="moreproject_text">Quick view of the final dataset</p>
                         <a href="" class="work__img">
-                            <img src="assets/img/work1.jpg" alt="">
+                            <img src="assets/img/btbdataset.jpg" alt="">
                         </a>
+                        <p class="moreproject_text">Data Distribution: Other than the binary feature 'label', all features generally exhibit normal distribution without significant skew</p>
+                        <br>
+                        <p class="moreproject_text">Baseline Models to test ML-readiness</p>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Training Accuracy</th>
+                                    <th>Testing Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Logistic Regression</td>
+                                    <td>62.3%</td>
+                                    <td>60.4%</td>
+                                </tr>
+                                <tr>
+                                    <td>Random Forest Classifier</td>
+                                    <td>68.4%</td>
+                                    <td>59.4%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <h3 class="moreproject__subtitle">Model Contribution: Loss Function Development</h3>
+                        <p class="moreproject_text">Beginning with an open source implementation of logistic regression, we wanted to redefine the loss for our logistic regression in order to best suit the goals of our model. Since we were ultimately dealing with a classification problem by predicting the winner of any given match, we opted for cross entropy loss as a more suitable loss function (as opposed to the square loss used in the guiding paper). By using the home-line, we simply classified negative values as the sportsbook predicting a home win, and otherwise a home loss.</p>
+                        <br>
+                        <p class="moreproject_text">The idea behind our penalty term was simple: we want to penalize our prediction each time it lines up with the sportsbook. Thus, a straightforward evaluation metric was to take po (our prediction) and pc (the sportsbook prediction), and calculate the term ~xor(po,pc)=and((po,pc)+~or((po,pc). A hyperparameter c could then be used to scale the magnitude of the penalty term.</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/lossfunction1.jpg" alt="">
+                        </a>
+                        <p class="moreproject_text">The next issue was applying this to our model, specifically through gradient descent. Fortunately, each of the terms was essentially ReLU (in terms of the math), and thus the gradient of the inner term of the summation was straightforward to take:</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/lossfunction2.jpg" alt="">
+                        </a>
+                        <br>
+                        <h3 class="moreproject_subtitle">PCA/Feature Analysis</h3>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Importance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>OREB</td>
+                                    <td>0.1216</td>
+                                </tr>
+                                <tr>
+                                    <td>PTS</td>
+                                    <td>0.0868</td>
+                                </tr>
+                                <tr>
+                                    <td>FGA</td>
+                                    <td>0.0831</td>
+                                </tr>
+                                <tr>
+                                    <td>TPA</td>
+                                    <td>0.0816</td>
+                                </tr>
+                                <tr>
+                                    <td>FTM</td>
+                                    <td>0.0718</td>
+                                </tr>
+                                <tr>
+                                    <td>TPM</td>
+                                    <td>0.0564</td>
+                                </tr>
+                                <tr>
+                                    <td>FGM</td>
+                                    <td>0.0561</td>
+                                </tr>
+                                <tr>
+                                    <td>REB</td>
+                                    <td>0.0512</td>
+                                </tr>
+                                <tr>
+                                    <td>BLK</td>
+                                    <td>0.0506</td>
+                                </tr>
+                                <tr>
+                                    <td>FTA</td>
+                                    <td>0.0484</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="" class="work__img">
+                            <img src="assets/img/btbtestaccuracy.jpg" alt="">
+                        </a>
+                        <p class="moreproject_text">Here, it seems like 8 components resulted in the largest accuracy gains, though overall accuracy remained fairly unimpressive around 62% with a baseline random forest classifier.</p>
                         <br>
                         <hr>
                         <br>
