@@ -263,6 +263,11 @@
 
                 <div class="moreproject__container bd-grid">  
                     <div>
+                        <h2 class="moreproject__subtitle">Offline Business Networking App</h2>
+                        <p class="moreproject__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.<br></p>
+                        <br>
+                        <hr>
+                        <br>
                         <h2 class="moreproject__subtitle">Beating the Book with ML</h2>
                         <p class="moreproject__text">The sports betting market has been growing substantially in recent years. To capture this opportunity, we are exploring the potential to profit from sports betting on the NBA. A key challenge in reliably beating a sportsbook is the necessity of having predictions that differ from those of the sportsbook itself. To address this, our first significant contribution involves gathering up-to-date data from the most recent complete NBA session (2022-23). This dataset includes comprehensive team and player statistics, betting lines, and match outcomes which are used to develop our predictive models. Our second major contribution is the development of a new loss function specifically designed to prioritize deviations from the sportsbook’s predictions. Our evaluations indicate that the sportsbook’s predictions are often accurate, underscoring the need for an approach to achieve a competitive edge in sports betting. Ultimately, for the games our model felt most confident that the home team would win, we achieved a value approaching ~35% where our model was correct while the sportsbook was wrong on smaller sample sizes of predictions and ~30% on larger sample sizes.<br></p>           
                         <br>
@@ -299,7 +304,7 @@
                         </table>
                         <br>
                         <h3 class="moreproject__subtitle">Model Contribution: Loss Function Development</h3>
-                        <p class="moreproject_text">Beginning with an open source implementation of logistic regression, we wanted to redefine the loss for our logistic regression in order to best suit the goals of our model. Since we were ultimately dealing with a classification problem by predicting the winner of any given match, we opted for cross entropy loss as a more suitable loss function (as opposed to the square loss used in the guiding paper). By using the home-line, we simply classified negative values as the sportsbook predicting a home win, and otherwise a home loss.</p>
+                        <p class="moreproject_text">Beginning with an open-source implementation of logistic regression, we wanted to redefine the loss for our logistic regression in order to best suit the goals of our model. Since we were ultimately dealing with a classification problem by predicting the winner of any given match, we opted for cross entropy loss as a more suitable loss function (as opposed to the square loss used in the guiding paper). By using the home-line, we simply classified negative values as the sportsbook predicting a home win, and otherwise a home loss.</p>
                         <br>
                         <p class="moreproject_text">The idea behind our penalty term was simple: we want to penalize our prediction each time it lines up with the sportsbook. Thus, a straightforward evaluation metric was to take po (our prediction) and pc (the sportsbook prediction), and calculate the term ~xor(po,pc)=and((po,pc)+~or((po,pc). A hyperparameter c could then be used to scale the magnitude of the penalty term.</p>
                         <a href="" class="work__img">
@@ -372,28 +377,23 @@ For our most confident home-win predictions (predictions with the highest raw sc
                         <a href="" class="work__img">
                             <img src="assets/img/btbfig21.jpg" alt="">
                         </a>                        
-                        <p class="moreproject_text">Figure 1</p>
+                        <p style="text-align:center">Figure 1</p>
                         <a href="" class="work__img">
                             <img src="assets/img/btbfig22.jpg" alt="">
                         </a>
-                        <p class="moreproject_text">Figure 2</p>
+                        <p style="text-align:center">Figure 2</p>
                         <a href="" class="work__img">
                             <img src="assets/img/btbfig23.jpg" alt="">
                         </a>
-                        <p class="moreproject_text">Figure 3</p>
+                        <p style="text-align:center">Figure 3</p>
                         <a href="" class="work__img">
                             <img src="assets/img/btbfig24.jpg" alt="">
                         </a>
-                        <p class="moreproject_text">Figure 4</p>
+                        <p style="text-align:center">Figure 4</p>
                         <br>
                         <hr>
                         <br>
                         <h2 class="moreproject__subtitle">Cryptocurrency Arbitrary Trading</h2>
-                        <p class="moreproject__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.<br></p>           
-                        <br>
-                        <hr>
-                        <br>
-                        <h2 class="moreproject__subtitle">Offline Networking App</h2>
                         <p class="moreproject__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.<br></p>           
                     </div> 
                 </div>
