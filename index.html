@@ -79,10 +79,10 @@
                     <div>
                         <h2 class="currentproject__subtitle">Gen AI Teaching Assistant</h2>
                         <br>
-                        <h2 class="currentproject_introduction">Introduction</h2>
+                        <h3 class="currentproject_introduction">Introduction</h3>
                         <p class="currentproject__text">Rising labor costs and declining student populations due to low birth rates pose significant challenges for private educational institutes (Hagwons) in Korea, threatening their operational viability. In-depth interviews with industry experts helped us reveal that a substantial amount of teacher work hours is dedicated to essay revisions. Recognizing this, we captured a notable opportunity to employ the capabilities of Large Language Models to streamline the essay revision process, thereby enhancing efficiency and potentially reducing overhead costs for these institutions.</p>           
                         <br>
-                        <h2 class="currentproject_metrics">Key Metrics</h2>
+                        <h3 class="currentproject_metrics">Key Metrics</h3>
                         <table border="1">
                             <thead>
                                 <tr>
@@ -117,7 +117,7 @@
                             </tbody>
                         </table>
                         <br>
-                        <h2 class="currentproject_personas">Personas</h2>
+                        <h3 class="currentproject_personas">Personas</h3>
                         <table border="1">
                             <thead>
                                 <tr>
@@ -146,7 +146,7 @@
                             </tbody>
                         </table>
                         <br>
-                        <h2 class="currentproject_userstories">User Stories</h2>
+                        <h3 class="currentproject_userstories">User Stories</h3>
                         <table border="1">
                             <thead>
                                 <tr>
@@ -195,9 +195,9 @@
                             </tbody>
                         </table>
                         <br>
-                        <h2 class="currentproject_requirements">Functional/Non-Functional Requirements</h2>
+                        <h3 class="currentproject_requirements">Functional/Non-Functional Requirements</h3>
                         <br>
-                        <h2 class="currentproject_technicalspec">Technical Specifications</h2>
+                        <h3 class="currentproject_technicalspec">Technical Specifications</h3>
                         <table border="1">
                             <thead>
                                 <tr>
@@ -213,7 +213,7 @@
                                     <td><img src="URL_TO_NEXTJS_LOGO" alt="Next.js Logo" width="50"></td>
                                 </tr>
                                 <tr>
-                                    <td>Backend</td>
+                                    <td rowspan="2">Backend</td>
                                     <td>Python</td>
                                     <td><img src="URL_TO_PYTHON_LOGO" alt="Python Logo" width="50"></td>
                                 </tr>
@@ -243,14 +243,14 @@
                             </tbody>
                         </table>
                         <br>
-                        <h2 class="currentproject_productoverview">Product Overview</h2>
+                        <h3 class="currentproject_productoverview">Product Overview</h3>
                         <br>
-                        <h2 class="currentproject_productarchitecture">Product Architecture</h2>
+                        <h3 class="currentproject_productarchitecture">Product Architecture</h3>
                         <br>
-                        <h2 class="currentproject_database">Database</h2>
+                        <h3 class="currentproject_database">Database</h3>
                         <a href="https://docs.google.com/document/d/1BjDoPW7cm_p50auRiyFQCQdO1EpY3p9-10v4UzmrHXU/edit" class="button">Database Documentation</a>
                         <br>
-                        <h2 class="currentproject_demo">Product Demo</h2>
+                        <h3 class="currentproject_demo">Product Demo</h3>
                         <br>
                     </div>                                   
                 </div>
@@ -266,7 +266,7 @@
                         <h2 class="moreproject__subtitle">Beating the Book with ML</h2>
                         <p class="moreproject__text">The sports betting market has been growing substantially in recent years. To capture this opportunity, we are exploring the potential to profit from sports betting on the NBA. A key challenge in reliably beating a sportsbook is the necessity of having predictions that differ from those of the sportsbook itself. To address this, our first significant contribution involves gathering up-to-date data from the most recent complete NBA session (2022-23). This dataset includes comprehensive team and player statistics, betting lines, and match outcomes which are used to develop our predictive models. Our second major contribution is the development of a new loss function specifically designed to prioritize deviations from the sportsbook’s predictions. Our evaluations indicate that the sportsbook’s predictions are often accurate, underscoring the need for an approach to achieve a competitive edge in sports betting. Ultimately, for the games our model felt most confident that the home team would win, we achieved a value approaching ~35% where our model was correct while the sportsbook was wrong on smaller sample sizes of predictions and ~30% on larger sample sizes.<br></p>           
                         <br>
-                        <h2 class="moreproject__subtitle">Data Contribution</h2>
+                        <h3 class="moreproject__subtitle">Data Contribution</h3>
                         <p class="moreproject_text">In terms of gathering data, research suggests that the choice of features is more important than the choice of the model itself [Zimmermann, Moorthy, and Shi; 2013]. Knowing this, we aimed to provide an up-to-date dataset with features backed by research (listed above, and the choice of features listed as well in the Hubacek, Sourek, and Zelenzy paper). To do this, data from the 2022-23 (the most recent completed season) was scraped, and then the results were cleaned, combined, and labeled to create new .csv files that were ML-ready.</p>
                         <br>
                         <p class="moreproject_text">Quick view of the final dataset</p>
@@ -365,6 +365,26 @@
                             <img src="assets/img/btbtestaccuracy.jpg" alt="">
                         </a>
                         <p class="moreproject_text">Here, it seems like 8 components resulted in the largest accuracy gains, though overall accuracy remained fairly unimpressive around 62% with a baseline random forest classifier.</p>
+                        <br>
+                        <h3 class="moreproject__subtitle">Performance Evaluation</h3>
+                        <p class="moreproject_text">Evaluation is inherently tricky since the sportsbook is usually right (about ~68% of the time for the 2022-23 season). As a result, simply evaluating accuracy like in traditional models won’t be the best metric. Recall that we are penalizing similarity to the sportsbooks, meaning many times we are penalizing the outcome as being correct. Thus tuning the penalty hyperparameter c becomes incredibly important since having the penalty term dominate may lead to unexpected behavior. We settled on the following evaluation method.
+For our most confident home-win predictions (predictions with the highest raw score generated by the logistic regression) we can measure how many times we correctly predict the label while the sportsbook is wrong. Thus, by taking the top X most certain predictions of our model we can expect to beat the sportsbook a certain number of times. However, the evaluation magnitude, or the number of predictions from our model that we actually utilize is also critical, since if we use too few predictions we derive little benefit, while using too many predictions results in decreasing accuracy. In addition to Figure 1 which simply shows the raw number of predictions on the y-axis, we thus also need to examine the ratio of differing correct predictions to the total evaluation magnitude (Figure 2). Seemingly, the optimal value for our hyperparameter was around 2, predicting correctly over the sports book at a rate of about 50% on smaller sample sizes, and ~35% on larger sample sizes on all data. When considering only test data (Figures 3, 4), values hovered around 30% - which shows some ability to generalize.</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/btbfig21.jpg" alt="">
+                        </a>                        
+                        <p class="moreproject_text">Figure 1</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/btbfig22.jpg" alt="">
+                        </a>
+                        <p class="moreproject_text">Figure 2</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/btbfig23.jpg" alt="">
+                        </a>
+                        <p class="moreproject_text">Figure 3</p>
+                        <a href="" class="work__img">
+                            <img src="assets/img/btbfig24.jpg" alt="">
+                        </a>
+                        <p class="moreproject_text">Figure 4</p>
                         <br>
                         <hr>
                         <br>
