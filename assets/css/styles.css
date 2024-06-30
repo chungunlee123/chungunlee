@@ -242,9 +242,7 @@ img {
 .about__subtitle {
   margin-bottom: var(--mb-2);
 }
-.about__img {
-  justify-self: left;
-}
+
 .about__img img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
