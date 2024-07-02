@@ -679,10 +679,10 @@
         <!--===== CLICK REVEAL =====-->
         <script>
             function toggleSection(sectionId) {
-                var section = document.getElementById(sectionId);
-                var button = section.previousElementSibling;
+                var section = document.getElementById('sectionId');
+                var button = document.previousElementSibling;
                 
-                if (section.style.display === "none" || section.style.display === "") {
+                if (section.style.display === "none") {
                     section.style.display = "block";
                     button.innerHTML = "Hide Details";
                 } else {
