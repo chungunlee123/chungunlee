@@ -83,195 +83,197 @@
                         <h3 class="currentproject_introduction">Introduction</h3>
                         <p class="currentproject__text">Rising labor costs and declining student populations due to low birth rates pose significant challenges for private educational institutes (Hagwons) in Korea, threatening their operational viability. In-depth interviews with industry experts helped us capture a notable opportunity to employ the capabilities of Large Language Models to streamline the grading process, thereby enhancing efficiency and potentially reducing overhead costs for these institutions.</p>           
                         <br>
-                        <h3 class="currentproject_metrics">Key Metrics</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>Metric</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td rowspan="2">Learning Effectiveness and Efficiency</td>
-                                    <td>Student Assignment Completion Rate</td>
-                                    <td>Completed Assignments / Total Number of Assignments</td>
-                                </tr>
-                                <tr>
-                                    <td>Student Grade Improvement</td>
-                                    <td>(Grade after our product - Grade before our product) / Grade before our product</td>
-                                </tr>
-                                <tr>
-                                    <td rowspan="2">Teaching Effectiveness and Efficiency</td>
-                                    <td>Time taken to grade assignments/exams</td>
-                                    <td>Total time taken to grade / Total number of assignments/exams</td>
-                                </tr>
-                                <tr>
-                                    <td>Revision Acceptance Rate</td>
-                                    <td>(Total number of revised assignments - Number of revised assignments that required manual adjustments) / Total number of revised assignments</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
-                        <h3 class="currentproject_personas">Personas</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Persona</th>
-                                    <th>Demographics</th>
-                                    <th>Goals</th>
-                                    <th>Challenges</th>
-                                    <th>Needs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Emily, the Teacher</td>
-                                    <td>Age 24, teacher at a mid-sized institute</td>
-                                    <td>Wants to ensure effective class management to minimize grading time and enhance class quality</td>
-                                    <td>Struggles to manage time due to a large workload</td>
-                                    <td>Needs a tool that assists in grading assignments and providing feedback</td>
-                                </tr>
-                                <tr>
-                                    <td>Richard, the Student</td>
-                                    <td>Age 10, student enrolled at a mid-sized institute</td>
-                                    <td>Seeks continuous guidance for assignments to improve English skill</td>
-                                    <td>Faces challenges in obtaining personalized guidance as an ESL student during assignments</td>
-                                    <td>Requires a tool that provides suggestions for improving work quality</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
-                        <h3 class="currentproject_userstories">User Stories</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Persona</th>
-                                    <th>Epic</th>
-                                    <th>User Story</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Emily, the Teacher -->
-                                <tr>
-                                    <td rowspan="9">Emily, the Teacher</td>
-                                    <td rowspan="9">As a teacher, I want to ensure that my classes are effectively managed so that I can minimize time spent on grading and invest more time in improving class quality.</td>
-                                    <td>As a teacher, I want to have all my courses and students pre-registered in the system to easily onboard and not waste time on registration.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to view all my responsible student groups, classes, and assignments on a dashboard for direct navigation.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to utilize a sidebar menu for convenient navigation through different pages.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to view a list of past and upcoming classes of the selected student group for convenient class management.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to create assignments on class pages by specifying essay topics, instructions, and uploading materials for student submissions.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to view the submission status of all students by clicking on the assignment page to manage assignments effectively.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to view AI-reviewed submissions of a particular student by selecting them on the assignment page to confirm the correctness of AI revision.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want a Students page to view all students and their grades.</td>
-                                </tr>
-                                <tr>
-                                    <td>As a teacher, I want to click on a student from the Students page to view all submitted assignments of the selected student.</td>
-                                </tr>
-                                <!-- Richard, the Student -->
-                                <tr>
-                                    <td>Richard, the Student</td>
-                                    <td>As a student, I want to receive constructive feedback on writing assignments to improve my writing skills.</td>
-                                    <td>As a student, I want to submit my assignments to the respective class.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
-                        <h3 class="currentproject_requirements">Functional/Non-Functional Requirements</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Persona</th>
-                                    <th>User Story</th>
-                                    <th>Functional Requirements</th>
-                                    <th>Non-Functional Requirements</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td rowspan="10">Emily, the Teacher</td>
-                                </tr>
-                                <tr>
-                                    <td>Pre-registration of courses and students</td>
-                                    <td>System must allow bulk registration of courses and students prior to the start of a term.</td>
-                                    <td>Performance: System should handle bulk uploads efficiently without significant delays.</td>
-                                </tr>
-                                <tr>
-                                    <td>Dashboard for classes and assignments</td>
-                                    <td>Develop a comprehensive dashboard that displays all relevant class, group, and assignment information.</td>
-                                    <td>Usability: Dashboard must be user-friendly and provide intuitive navigation.</td>
-                                </tr>
-                                <tr>
-                                    <td>Sidebar menu navigation</td>
-                                    <td>Implement a sidebar menu for easy access to different educational and administrative pages.</td>
-                                    <td>Accessibility: Ensure the sidebar menu is accessible to users with disabilities.</td>
-                                </tr>
-                                <tr>
-                                    <td>Management of classes</td>
-                                    <td>Functionality to view both past and upcoming classes for any selected student group.</td>
-                                    <td>Reliability: Class lists must be consistently accurate and up to date.</td>
-                                </tr>
-                                <tr>
-                                    <td>Assignment creation and management</td>
-                                    <td>Enable teachers to create and manage assignments, including uploading materials and specifying topics.</td>
-                                    <td>Scalability: System should support a large number of concurrent assignment creations and uploads.</td>
-                                </tr>
-                                <tr>
-                                    <td>View submission status</td>
-                                    <td>Feature to check the status of student submissions directly from the assignment page.</td>
-                                    <td>Performance: Quick retrieval and display of submission statuses.</td>
-                                </tr>
-                                <tr>
-                                    <td>AI-reviewed submissions</td>
-                                    <td>Ability to view AI-reviewed submissions and validate their accuracy.</td>
-                                    <td>Accuracy: AI reviews should meet a high standard of reliability in assessment.</td>
-                                </tr>
-                                <tr>
-                                    <td>Students page for monitoring grades</td>
-                                    <td>Create a 'Students' page where all students' profiles and grades are accessible.</td>
-                                    <td>Security: Ensure strict access controls and data protection for student information.</td>
-                                </tr>
-                                <tr>
-                                    <td>Detailed student assignment review</td>
-                                    <td>Function to click on a student’s profile to view detailed information about their assignments.</td>
-                                    <td>Usability: This feature must be straightforward and easy to use.</td>
-                                </tr>
-                                <tr>
-                                    <td>Richard, the Student</td>
-                                    <td>Submit assignments</td>
-                                    <td>Develop a feature allowing students to upload assignments directly to the designated class within the educational platform.</td>
-                                    <td>Usability: The image capture and upload process must be intuitive and straightforward for students of all technical skill levels. Performance: The system should quickly process and upload images, ensuring a smooth user experience.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p style = "text-align: right;">*Simplified version from original PRD</p>
-                        <br>
-                        <h3 class="currentproject_productoverview">Product Overview</h3>
-                        <br>
-                        <h3 class="currentproject_productarchitecture">Product Architecture</h3>
-                        <br>
-                        <h3 class="currentproject_database">Database</h3>
-                        <a href="https://drive.google.com/file/d/1sxu7Ym8xPh8cReVwbm8MYVEa0wpJeZfJ/view" class="button">Database Documentation</a>
-                        <br>
-                        <h3 class="currentproject_demo">Product Demo</h3>
-                        <br>
-                    </div>                                   
+                        <button onclick="toggleDetails()">See Details</button>
+                        <div id="details" style="display:none;">
+                            <h3 class="currentproject_metrics">Key Metrics</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Metric</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">Learning Effectiveness and Efficiency</td>
+                                        <td>Student Assignment Completion Rate</td>
+                                        <td>Completed Assignments / Total Number of Assignments</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student Grade Improvement</td>
+                                        <td>(Grade after our product - Grade before our product) / Grade before our product</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">Teaching Effectiveness and Efficiency</td>
+                                        <td>Time taken to grade assignments/exams</td>
+                                        <td>Total time taken to grade / Total number of assignments/exams</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Revision Acceptance Rate</td>
+                                        <td>(Total number of revised assignments - Number of revised assignments that required manual adjustments) / Total number of revised assignments</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 class="currentproject_personas">Personas</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Persona</th>
+                                        <th>Demographics</th>
+                                        <th>Goals</th>
+                                        <th>Challenges</th>
+                                        <th>Needs</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Emily, the Teacher</td>
+                                        <td>Age 24, teacher at a mid-sized institute</td>
+                                        <td>Wants to ensure effective class management to minimize grading time and enhance class quality</td>
+                                        <td>Struggles to manage time due to a large workload</td>
+                                        <td>Needs a tool that assists in grading assignments and providing feedback</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Richard, the Student</td>
+                                        <td>Age 10, student enrolled at a mid-sized institute</td>
+                                        <td>Seeks continuous guidance for assignments to improve English skill</td>
+                                        <td>Faces challenges in obtaining personalized guidance as an ESL student during assignments</td>
+                                        <td>Requires a tool that provides suggestions for improving work quality</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 class="currentproject_userstories">User Stories</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Persona</th>
+                                        <th>Epic</th>
+                                        <th>User Story</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Emily, the Teacher -->
+                                    <tr>
+                                        <td rowspan="9">Emily, the Teacher</td>
+                                        <td rowspan="9">As a teacher, I want to ensure that my classes are effectively managed so that I can minimize time spent on grading and invest more time in improving class quality.</td>
+                                        <td>As a teacher, I want to have all my courses and students pre-registered in the system to easily onboard and not waste time on registration.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to view all my responsible student groups, classes, and assignments on a dashboard for direct navigation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to utilize a sidebar menu for convenient navigation through different pages.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to view a list of past and upcoming classes of the selected student group for convenient class management.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to create assignments on class pages by specifying essay topics, instructions, and uploading materials for student submissions.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to view the submission status of all students by clicking on the assignment page to manage assignments effectively.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to view AI-reviewed submissions of a particular student by selecting them on the assignment page to confirm the correctness of AI revision.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want a Students page to view all students and their grades.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>As a teacher, I want to click on a student from the Students page to view all submitted assignments of the selected student.</td>
+                                    </tr>
+                                    <!-- Richard, the Student -->
+                                    <tr>
+                                        <td>Richard, the Student</td>
+                                        <td>As a student, I want to receive constructive feedback on writing assignments to improve my writing skills.</td>
+                                        <td>As a student, I want to submit my assignments to the respective class.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <h3 class="currentproject_requirements">Functional/Non-Functional Requirements</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Persona</th>
+                                        <th>User Story</th>
+                                        <th>Functional Requirements</th>
+                                        <th>Non-Functional Requirements</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="10">Emily, the Teacher</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pre-registration of courses and students</td>
+                                        <td>System must allow bulk registration of courses and students prior to the start of a term.</td>
+                                        <td>Performance: System should handle bulk uploads efficiently without significant delays.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dashboard for classes and assignments</td>
+                                        <td>Develop a comprehensive dashboard that displays all relevant class, group, and assignment information.</td>
+                                        <td>Usability: Dashboard must be user-friendly and provide intuitive navigation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sidebar menu navigation</td>
+                                        <td>Implement a sidebar menu for easy access to different educational and administrative pages.</td>
+                                        <td>Accessibility: Ensure the sidebar menu is accessible to users with disabilities.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Management of classes</td>
+                                        <td>Functionality to view both past and upcoming classes for any selected student group.</td>
+                                        <td>Reliability: Class lists must be consistently accurate and up to date.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assignment creation and management</td>
+                                        <td>Enable teachers to create and manage assignments, including uploading materials and specifying topics.</td>
+                                        <td>Scalability: System should support a large number of concurrent assignment creations and uploads.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>View submission status</td>
+                                        <td>Feature to check the status of student submissions directly from the assignment page.</td>
+                                        <td>Performance: Quick retrieval and display of submission statuses.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AI-reviewed submissions</td>
+                                        <td>Ability to view AI-reviewed submissions and validate their accuracy.</td>
+                                        <td>Accuracy: AI reviews should meet a high standard of reliability in assessment.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Students page for monitoring grades</td>
+                                        <td>Create a 'Students' page where all students' profiles and grades are accessible.</td>
+                                        <td>Security: Ensure strict access controls and data protection for student information.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Detailed student assignment review</td>
+                                        <td>Function to click on a student’s profile to view detailed information about their assignments.</td>
+                                        <td>Usability: This feature must be straightforward and easy to use.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Richard, the Student</td>
+                                        <td>Submit assignments</td>
+                                        <td>Develop a feature allowing students to upload assignments directly to the designated class within the educational platform.</td>
+                                        <td>Usability: The image capture and upload process must be intuitive and straightforward for students of all technical skill levels. Performance: The system should quickly process and upload images, ensuring a smooth user experience.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p style = "text-align: right;">*Simplified version from original PRD</p>
+                            <br>
+                            <h3 class="currentproject_productoverview">Product Overview</h3>
+                            <br>
+                            <h3 class="currentproject_productarchitecture">Product Architecture</h3>
+                            <br>
+                            <h3 class="currentproject_database">Database</h3>
+                            <a href="https://drive.google.com/file/d/1sxu7Ym8xPh8cReVwbm8MYVEa0wpJeZfJ/view" class="button">Database Documentation</a>
+                            <br>
+                            <h3 class="currentproject_demo">Product Demo</h3>
+                            <br>
+                        </div>                                   
+                    </div>
                 </div>
-
             </section>
 
             <!--===== More PROJECTS =====-->
@@ -652,5 +654,17 @@ For our most confident home-win predictions (predictions with the highest raw sc
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!--===== CLICK REVEAL =====-->
+        <script>
+            function toggleDetails() {
+                var x = document.getElementById("details");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
     </body>
 </html>
