@@ -682,9 +682,8 @@
                 var section = document.getElementById(sectionId);
                 var button = section.previousElementSibling;
                 
-                if (section.style.display === "none") {
+                if (section.style.display === "none" || section.style.display === "") {
                     section.style.display = "block";
-                    var forceReflow = section.offsetHeight;
                     button.textContent = "Hide Details";
                 } else {
                     section.style.display = "none";
