@@ -83,8 +83,8 @@
                         <h3 class="currentproject_introduction">Introduction</h3>
                         <p class="currentproject__text">Rising labor costs and declining student populations due to low birth rates pose significant challenges for private educational institutes (Hagwons) in Korea, threatening their operational viability. In-depth interviews with industry experts helped us capture a notable opportunity to employ the capabilities of Large Language Models to streamline the grading process, thereby enhancing efficiency and potentially reducing overhead costs for these institutions.</p>           
                         <br>
-                        <button class="button" onclick="toggleDetails()">Show Details</button>
-                        <div id="details" style="display:none;">
+                        <button class="button" onclick="toggleSection('section1)">Show Details</button>
+                        <div id="section1" style="display:none;">
                             <h3 class="currentproject_metrics">Key Metrics</h3>
                             <table border="1">
                                 <thead>
@@ -272,7 +272,7 @@
                             <h3 class="currentproject_demo">Product Demo</h3>
                             <br>
                             <br>
-                            <button class="button" onclick="toggleDetails()">Hide Details</button>
+                            <button class="button" onclick="toggleSection('section1)">Hide Details</button>
                         </div>                                   
                     </div>
                 </div>
@@ -287,11 +287,11 @@
                         <h2 class="moreproject__subtitle">Connect: Revolutionizing In-Person Business Networking with Digital Solutions</h2>
                         <p class="moreproject__text">Co-founded a startup in 2019 with the vision to solve the inefficiency in business networking</p>
                         <br>
-                        <button class="button" onclick="toggleDetails()">Show Details</button>
-                        <div id="details" style="display:none;">
-                            <h3 class="moreproject_subtitle">Introduction</h3>
-                            <p class="moreproject__text">Connect was designed to bridge the gap between traditional and digital networking, providing a seamless solution for today's business professionals. While digital networking thrives online, the power of in-person interactions remains unmatched, particularly in business environments in Asia where the exchange of business cards is pivotal. Our mobile application, Connect, leveraged advanced technologies such as computer vision, NFC, Bluetooth, IPS, and machine learning to enhance offline networking experiences. Unlike traditional digital business card generators and social networking platforms, Connect aimed to offer a robust feature set that includes the creation, recording, and transfer of digital business cards directly from smartphones and watches.<br></p>
-                            <br>
+                        <h3 class="moreproject_subtitle">Introduction</h3>
+                        <p class="moreproject__text">Connect was designed to bridge the gap between traditional and digital networking, providing a seamless solution for today's business professionals. While digital networking thrives online, the power of in-person interactions remains unmatched, particularly in business environments in Asia where the exchange of business cards is pivotal. Our mobile application, Connect, leveraged advanced technologies such as computer vision, NFC, Bluetooth, IPS, and machine learning to enhance offline networking experiences. Unlike traditional digital business card generators and social networking platforms, Connect aimed to offer a robust feature set that includes the creation, recording, and transfer of digital business cards directly from smartphones and watches.<br></p>
+                        <br>
+                        <button class="button" onclick="toggleSection('section2')">Show Details</button>
+                        <div id="section2" style="display:none;">
                             <h3 class="moreproject_subtitle">Go-to-Market Strategy</h3>
                             <a href="" class="work__img">
                                 <img src="assets/img/connect1.jpg" alt="">
@@ -481,17 +481,17 @@
                             </a>
                             <p class="moreproject_text">We aimed to revolutionize in-person business networking with our application, Connect, designed to streamline profile exchanges through just a touch of two devices using NFC technology, recommend potential connections by analyzing business profiles, and facilitate meet-ups using positioning technology. Unfortunately, the unexpected onset of the pandemic hindered our progress. Despite this setback, I am eager to advance this concept in the future, refining and adapting our strategy to meet new market realities.</p>
                             <br>
-                            <button class="button" onclick="toggleDetails()">Hide Details</button>
+                            <button class="button" onclick="toggleSection('section2')">Hide Details</button>
                         </div> 
                         <hr>
                         <br>
                         <h2 class="moreproject__subtitle">Beating the Book with ML</h2>
                         <br>
-                        <button class="button" onclick="toggleDetails()">Show Details</button>
-                        <div id="details" style="display:none;">
-                            <h3 class="moreproject_subtitle">Introduction</h3>
-                            <p class="moreproject__text">The sports betting market has been growing substantially in recent years. To capture this opportunity, we are exploring the potential to profit from sports betting on the NBA. A key challenge in reliably beating a sportsbook is the necessity of having predictions that differ from those of the sportsbook itself. To address this, our first significant contribution involves gathering up-to-date data from the most recent complete NBA session (2022-23). This dataset includes comprehensive team and player statistics, betting lines, and match outcomes which are used to develop our predictive models. Our second major contribution is the development of a new loss function specifically designed to prioritize deviations from the sportsbook’s predictions. Our evaluations indicate that the sportsbook’s predictions are often accurate, underscoring the need for an approach to achieve a competitive edge in sports betting. Ultimately, for the games our model felt most confident that the home team would win, we achieved a value approaching ~35% where our model was correct while the sportsbook was wrong on smaller sample sizes of predictions and ~30% on larger sample sizes.<br></p>           
-                            <br>
+                        <h3 class="moreproject_subtitle">Introduction</h3>
+                        <p class="moreproject__text">The sports betting market has been growing substantially in recent years. To capture this opportunity, we are exploring the potential to profit from sports betting on the NBA. A key challenge in reliably beating a sportsbook is the necessity of having predictions that differ from those of the sportsbook itself. To address this, our first significant contribution involves gathering up-to-date data from the most recent complete NBA session (2022-23). This dataset includes comprehensive team and player statistics, betting lines, and match outcomes which are used to develop our predictive models. Our second major contribution is the development of a new loss function specifically designed to prioritize deviations from the sportsbook’s predictions. Our evaluations indicate that the sportsbook’s predictions are often accurate, underscoring the need for an approach to achieve a competitive edge in sports betting. Ultimately, for the games our model felt most confident that the home team would win, we achieved a value approaching ~35% where our model was correct while the sportsbook was wrong on smaller sample sizes of predictions and ~30% on larger sample sizes.<br></p>           
+                        <br>
+                        <button class="button" onclick="toggleSection('section3')">Show Details</button>
+                        <div id="section3" style="display:none;">
                             <h3 class="moreproject__subtitle">Data Contribution</h3>
                             <p class="moreproject_text">In terms of gathering data, research suggests that the choice of features is more important than the choice of the model itself [Zimmermann, Moorthy, and Shi; 2013]. Knowing this, we aimed to provide an up-to-date dataset with features backed by research (listed above, and the choice of features listed as well in the Hubacek, Sourek, and Zelenzy paper). To do this, data from the 2022-23 (the most recent completed season) was scraped, and then the results were cleaned, combined, and labeled to create new .csv files that were ML-ready.</p>
                             <br>
@@ -612,18 +612,18 @@
                             </a>
                             <p style="text-align:center">Figure 4</p>
                             <br>
-                            <button class="button" onclick="toggleDetails()">Hide Details</button>
+                            <button class="button" onclick="toggleSection('section3')">Hide Details</button>
                         </div>
                         <hr>
                         <br>
                         <h2 class="moreproject__subtitle">Cryptocurrency Arbitrage Trading</h2>
                         <p class="moreproject__text">Python program that collects price information from various markets selling BTC looking for arbitrage opportunities.</p>
                         <br>
-                        <button class="button" onclick="toggleDetails()">Show Details</button>
+                        <h3 class="moreproject__subtitle">Introduction</h3>
+                        <p class="moreproject__text">Arbitrage opportunities open up in markets that sell the same asset. Tools can be built to help automate the process of arbitrage when exchange rates between the markets are large enough. Although solutions can be built to help users automate the end-to-end process of arbitrage (including the actual purchase and selling of assets), the idea of the project is to help with the initial process of identifying if there are arbitrage opportunities or not and let the user act accordingly (i.e., analyze if it makes sense to get involved in carrying out the arbitrage opportunity).<br></p>
+                        <br>
+                        <button class="button" onclick="toggleSection('section4')">Show Details</button>
                         <div id="details" style="display:none;">
-                            <h3 class="moreproject__subtitle">Introduction</h3>
-                            <p class="moreproject__text">Arbitrage opportunities open up in markets that sell the same asset. Tools can be built to help automate the process of arbitrage when exchange rates between the markets are large enough. Although solutions can be built to help users automate the end-to-end process of arbitrage (including the actual purchase and selling of assets), the idea of the project is to help with the initial process of identifying if there are arbitrage opportunities or not and let the user act accordingly (i.e., analyze if it makes sense to get involved in carrying out the arbitrage opportunity).<br></p>
-                            <br>
                             <p class="moreproject__text">Through this project, we will scrape a web page using Selenium and connect to the UpBit API to collect information about the prices of assets (for instance, BTC). With the collected information, it will process it and compare them to let the user identify if there is room for an arbitrage to take place. The processed information will be stored in CSV files for further analysis.</p>
                             <br>
                             <p class="moreproject__text">Sample Output</p>
@@ -631,7 +631,7 @@
                                 <img src="assets/img/crypto_arbitrage.jpg" alt="">
                             </a>
                             <br>
-                            <button class="button" onclick="toggleDetails()">Hide Details</button>
+                            <button class="button" onclick="toggleSection('section4')">Hide Details</button>
                         </div>
                     </div> 
                 </div>
@@ -672,12 +672,16 @@
 
         <!--===== CLICK REVEAL =====-->
         <script>
-            function toggleDetails() {
-                var x = document.getElementById("details");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
+            function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                var button = section.previousElementSibling;
+                
+                if (section.style.display === "none") {
+                    section.style.display = "block";
+                    button.textContent = "Hide Details";
                 } else {
-                    x.style.display = "none";
+                    section.style.display = "none";
+                    button.textContent = "Show Details";
                 }
             }
         </script>
