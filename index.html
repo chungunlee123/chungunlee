@@ -298,15 +298,11 @@
                         <button class="button" onclick="toggleSection('section2')">Show Details</button>
                         <div id="section2" style="display:none;">
                             <h3 class="moreproject_subtitle">Go-to-Market Strategy</h3>
-                            <a href="" class="work__img">
-                                <img src="assets/img/connect1.jpg" alt="">
-                            </a>
+                            <img src="assets/img/connect1.jpg" alt="">
                             <br>
                             <p class="moreproject__text">Through market research we identified that many attendees at large-scale business events face challenges in networking effectively due to the bustling environment and high attendee volumes. Additionally, our findings before the outbreak of the pandemic highlighted that Hong Kong's MICE (Meetings, Incentives, Conventions, and Exhibitions) industry will continue to thrive, reinforcing the city's reputation as Asia's global hub.</p>
                             <br>
-                            <a href="" class="work__img">
-                                <img src="assets/img/connect2.jpg" alt="">
-                            </a>
+                            <img src="assets/img/connect2.jpg" alt="">
                             <br>
                             <p class="moreproject__text">Our go-to-market strategy focused on the Hong Kong MICE industry, targeting large-scale events visited by a large number of diverse professionals. We planned to establish strategic partnerships with event organizers to integrate our application, enabling event participants to access the detailed business profiles of other participants and locate each other via the Indoor Positioning System (IPS). Our startup was funded by the Hong Kong Science and Technology Parks Corporation (HKSTP), and the City University of Hong Kong (CityU). We also engaged in preliminary discussions with the Hong Kong Trade Development Council (HKTDC) to explore collaboration opportunities. Looking ahead, our vision extended to enhancing Connect by incorporating GPS technology, positioning it as a versatile tool for daily in-person networking beyond business environments.</p>
                             <br>
@@ -477,13 +473,9 @@
                             <p style = "text-align: right;">*Simplified version from original PRD</p>
                             <br>
                             <h3 class="moreproject_subtitle">Product Overview</h3>
-                            <a href="" class="work__img">
-                                <img src="assets/img/connect3.jpg" alt="">
-                            </a>
+                            <img src="assets/img/connect3.jpg" alt="">
                             <br>
-                            <a href="" class="work__img">
-                                <img src="assets/img/connect4.jpg" alt="">
-                            </a>
+                            <img src="assets/img/connect4.jpg" alt="">
                             <p class="moreproject_text">We aimed to revolutionize in-person business networking with our application, Connect, designed to streamline profile exchanges through just a touch of two devices using NFC technology, recommend potential connections by analyzing business profiles, and facilitate meet-ups using positioning technology. Unfortunately, the unexpected onset of the pandemic hindered our progress. Despite this setback, I am eager to advance this concept in the future, refining and adapting our strategy to meet new market realities.</p>
                             <br>
                             <button class="button" onclick="toggleSection('section2')">Hide Details</button>
@@ -501,9 +493,8 @@
                             <p class="moreproject_text">In terms of gathering data, research suggests that the choice of features is more important than the choice of the model itself [Zimmermann, Moorthy, and Shi; 2013]. Knowing this, we aimed to provide an up-to-date dataset with features backed by research (listed above, and the choice of features listed as well in the Hubacek, Sourek, and Zelenzy paper). To do this, data from the 2022-23 (the most recent completed season) was scraped, and then the results were cleaned, combined, and labeled to create new .csv files that were ML-ready.</p>
                             <br>
                             <p class="moreproject_text">Quick view of the final dataset</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbdataset.jpg" alt="">
-                            </a>
+                            <img src="assets/img/btbdataset.jpg" alt="">
+                            <br>
                             <p class="moreproject_text">Data Distribution: Other than the binary feature 'label', all features generally exhibit normal distribution without significant skew</p>
                             <br>
                             <p class="moreproject_text">Baseline Models to test ML-readiness</p>
@@ -533,13 +524,12 @@
                             <p class="moreproject_text">Beginning with an open-source implementation of logistic regression, we wanted to redefine the loss for our logistic regression in order to best suit the goals of our model. Since we were ultimately dealing with a classification problem by predicting the winner of any given match, we opted for cross entropy loss as a more suitable loss function (as opposed to the square loss used in the guiding paper). By using the home-line, we simply classified negative values as the sportsbook predicting a home win, and otherwise a home loss.</p>
                             <br>
                             <p class="moreproject_text">The idea behind our penalty term was simple: we want to penalize our prediction each time it lines up with the sportsbook. Thus, a straightforward evaluation metric was to take po (our prediction) and pc (the sportsbook prediction), and calculate the term ~xor(po,pc)=and((po,pc)+~or((po,pc). A hyperparameter c could then be used to scale the magnitude of the penalty term.</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/lossfunction1.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/lossfunction1.jpg" alt="">
+                            <br>
                             <p class="moreproject_text">The next issue was applying this to our model, specifically through gradient descent. Fortunately, each of the terms was essentially ReLU (in terms of the math), and thus the gradient of the inner term of the summation was straightforward to take:</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/lossfunction2.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/lossfunction2.jpg" alt="">
                             <br>
                             <h3 class="moreproject_subtitle">PCA/Feature Analysis</h3>
                             <table border="1">
@@ -592,29 +582,25 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbtestaccuracy.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/btbtestaccuracy.jpg" alt="">
+                            <br>
                             <p class="moreproject_text">Here, it seems like 8 components resulted in the largest accuracy gains, though overall accuracy remained fairly unimpressive around 62% with a baseline random forest classifier.</p>
                             <br>
                             <h3 class="moreproject__subtitle">Performance Evaluation</h3>
                             <p class="moreproject_text">Evaluation is inherently tricky since the sportsbook is usually right (about ~68% of the time for the 2022-23 season). As a result, simply evaluating accuracy like in traditional models won’t be the best metric. Recall that we are penalizing similarity to the sportsbooks, meaning many times we are penalizing the outcome as being correct. Thus tuning the penalty hyperparameter c becomes incredibly important since having the penalty term dominate may lead to unexpected behavior. We settled on the following evaluation method.
     For our most confident home-win predictions (predictions with the highest raw score generated by the logistic regression) we can measure how many times we correctly predict the label while the sportsbook is wrong. Thus, by taking the top X most certain predictions of our model we can expect to beat the sportsbook a certain number of times. However, the evaluation magnitude, or the number of predictions from our model that we actually utilize is also critical, since if we use too few predictions we derive little benefit, while using too many predictions results in decreasing accuracy. In addition to Figure 1 which simply shows the raw number of predictions on the y-axis, we thus also need to examine the ratio of differing correct predictions to the total evaluation magnitude (Figure 2). Seemingly, the optimal value for our hyperparameter was around 2, predicting correctly over the sports book at a rate of about 50% on smaller sample sizes, and ~35% on larger sample sizes on all data. When considering only test data (Figures 3, 4), values hovered around 30% - which shows some ability to generalize.</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbfig21.jpg" alt="">
-                            </a>                        
+                            <br>
+                            <img src="assets/img/btbfig21.jpg" alt=""> 
                             <p style="text-align:center">Figure 1</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbfig22.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/btbfig22.jpg" alt="">
                             <p style="text-align:center">Figure 2</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbfig23.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/btbfig23.jpg" alt="">
                             <p style="text-align:center">Figure 3</p>
-                            <a href="" class="work__img">
-                                <img src="assets/img/btbfig24.jpg" alt="">
-                            </a>
+                            <br>
+                            <img src="assets/img/btbfig24.jpg" alt="">
                             <p style="text-align:center">Figure 4</p>
                             <br>
                             <button class="button" onclick="toggleSection('section3')">Hide Details</button>
@@ -633,7 +619,7 @@
                             <p class="moreproject__text">Through this project, we will scrape a web page using Selenium and connect to the UpBit API to collect information about the prices of assets (for instance, BTC). With the collected information, it will process it and compare them to let the user identify if there is room for an arbitrage to take place. The processed information will be stored in CSV files for further analysis.</p>
                             <br>
                             <p class="moreproject__text">Sample Output</p>
-                            <img class="work__img" src="assets/img/crypto_arbitrage.jpg" alt="Cryptocurrency Arbitrage">
+                            <img src="assets/img/crypto_arbitrage.jpg" alt="Cryptocurrency Arbitrage">
                             <br>
                             <button class="button" onclick="toggleSection('section4')">Hide Details</button>
                         </div>
