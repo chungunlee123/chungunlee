@@ -627,15 +627,15 @@
                         <h3 class="moreproject__subtitle">Introduction</h3>
                         <p class="moreproject__text">Arbitrage opportunities open up in markets that sell the same asset. Tools can be built to help automate the process of arbitrage when exchange rates between the markets are large enough. Although solutions can be built to help users automate the end-to-end process of arbitrage (including the actual purchase and selling of assets), the idea of the project is to help with the initial process of identifying if there are arbitrage opportunities or not and let the user act accordingly (i.e., analyze if it makes sense to get involved in carrying out the arbitrage opportunity).<br></p>
                         <br>
-                        <button class="button" onclick="toggleDetails('section4')">Show Details</button>
+                        <button class="button" onclick="toggleSection('section4')">Show Details</button>
                         <div id="section4" class="hidden">
                             <br>
                             <p class="moreproject__text">Through this project, we will scrape a web page using Selenium and connect to the UpBit API to collect information about the prices of assets (for instance, BTC). With the collected information, it will process it and compare them to let the user identify if there is room for an arbitrage to take place. The processed information will be stored in CSV files for further analysis.</p>
                             <br>
                             <p class="moreproject__text">Sample Output</p>
-                            <a href="" class="work__img" >
-                                <img src="assets/img/crypto_arbitrage.jpg" alt="Cryptocurrency Arbitrage">
-                            </a>
+                            <img src="assets/img/crypto_arbitrage.jpg" alt="Cryptocurrency Arbitrage">
+                            <br>
+                            <button class="button" onclick="toggleSection('section4')">Hide Details</button>
                         </div>
                     </div> 
                 </div>
@@ -676,14 +676,16 @@
 
         <!--===== CLICK REVEAL =====-->
         <script>
-            function toggleDetails(sectionId) {
+            function toggleSection(sectionId) {
                 var section = document.getElementById(sectionId);
-                if (section.style.display === 'none') {
-                    section.style.display = 'block';
-                    section.previousElementSibling.textContent = 'Hide Details';
+                var button = section.previousElementSibling;
+                
+                if (section.style.display === "none") {
+                    section.style.display = "block";
+                    button.textContent = "Hide Details";
                 } else {
-                    section.style.display = 'none';
-                    section.previousElementSibling.textContent = 'Show Details';
+                    section.style.display = "none";
+                    button.textContent = "Show Details";
                 }
             }
         </script>
