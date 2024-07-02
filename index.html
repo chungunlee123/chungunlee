@@ -629,7 +629,7 @@
                             <br>
                             <p class="moreproject__text">Sample Output</p>
                             <a href="" class="work__img">
-                                <img src="assets/img/crypto_arbitrage.jpg" alt="Crypto Arbitrage Sample Output">
+                                <img src="assets/img/crypto_arbitrage.jpg" alt="">
                             </a>
                             <br>
                             <button class="button" onclick="toggleSection('section4')">Hide Details</button>
@@ -679,6 +679,7 @@
                 
                 if (section.style.display === "none") {
                     section.style.display = "block";
+                    var forceReflow = section.offsetHeight;
                     button.textContent = "Hide Details";
                 } else {
                     section.style.display = "none";
